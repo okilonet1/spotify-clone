@@ -1,13 +1,14 @@
 "use client";
 
 import * as RadixSlider from "@radix-ui/react-slider";
+import { FC } from "react";
 
 interface SlideProps {
   value?: number;
   onChange?: (value: number) => void;
 }
 
-const Slider: React.FC<SlideProps> = ({ value = 1, onChange }) => {
+const Slider: FC<SlideProps> = ({ value = 1, onChange }) => {
   const handleChange = (newValue: number[]) => {
     onChange?.(newValue[0]);
   };

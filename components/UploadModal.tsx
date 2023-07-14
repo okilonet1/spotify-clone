@@ -88,6 +88,8 @@ const UploadModal: FC<UploadModalProps> = ({}) => {
         );
       }
 
+      
+
       const { error: supabaseError } = await supabaseClient
         .from("songs")
         .insert({

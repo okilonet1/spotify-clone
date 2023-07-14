@@ -13,13 +13,14 @@ import Button from "./Button";
 import useAuthModal from "@/hooks/useAuthModal";
 import { useUser } from "@/hooks/useUser";
 import usePlayer from "@/hooks/usePlayer";
+import { FC } from "react";
 
 interface HeaderProps {
   children: React.ReactNode;
   className?: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ children, className }) => {
+const Header: FC<HeaderProps> = ({ children, className }) => {
   const player = usePlayer();
   const router = useRouter();
   const authModal = useAuthModal();
